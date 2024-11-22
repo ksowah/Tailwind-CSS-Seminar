@@ -2,6 +2,7 @@ import Boxes from "./components/Boxes";
 import Card from "./components/Card";
 import Dashboard from "./components/Dashboard";
 import Divider from "./components/Divider";
+import Glass from "./components/Glass";
 import MainContent from "./components/MainContent";
 import Sidebar from "./components/Sidebar";
 import Video from "./components/Video";
@@ -9,7 +10,7 @@ import Video from "./components/Video";
 function App() {
   return (
     <div className="">
-      {/* <div className="flex flex-col items-center w-full py-[2rem] scroll-shadow">
+      <div className="flex flex-col items-center w-full py-[2rem] scroll-shadow">
         <p className="font-bold text-[1.6rem] ">Chapter One</p>
 
         <p className="font-medium text-[1.2rem] ">Grids</p>
@@ -53,11 +54,11 @@ function App() {
         <div className="w-full max-w-md mx-auto">
           <Video />
         </div>
-      </div> */}
+      </div>
 
       <Divider />
 
-      {/* <div className="flex flex-col items-center w-full py-[2rem] scroll-shadow">
+      <div className="flex flex-col items-center w-full py-[2rem] scroll-shadow">
         <p className="font-bold text-[1.6rem] ">Chapter Two</p>
 
         <p className="font-medium text-[1.2rem] ">Dynamic Breakpoints</p>
@@ -81,24 +82,45 @@ function App() {
         <Dashboard />
 
         <Divider />
-      </div> */}
+      </div>
 
       <Divider />
 
-      <div className="flex flex-col items-center w-full py-[2rem] scroll-shadow">
-        <div className="flex justify-center items-center w-full min-h-screen bg-gradient-to-br from-blue-500 to-purple-700">
-          <div className="relative w-80 p-6 bg-white/30 backdrop-blur-lg border border-white/20 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold text-white mb-4">
-              Glassmorphism
-            </h2>
-            <p className="text-white/80 mb-4">
-              This card uses a frosted-glass effect achieved with Tailwind CSS.
-            </p>
-            <button className="px-4 py-2 bg-white/20 text-white rounded-md border border-white/10 hover:bg-white/30 transition">
-              Click Me
-            </button>
-          </div>
+      <div className="flex flex-col items-center w-full py-[2rem] scroll-shadow space-y-[1rem] ">
+        <p className="font-bold text-[1.6rem] ">Chapter Three</p>
+        <Glass />
+
+        <p className="font-medium text-[1.2rem] my-[1rem] ">
+          Transitions annd animations
+        </p>
+        <div className="p-6 bg-gray-200 rounded-lg transition-all duration-500 ease-in-out hover:bg-gray-300 hover:rotate-3 hover:shadow-xl">
+          Hover over this box
         </div>
+
+        <button className="px-6 py-3 bg-blue-500 text-white rounded-md animate-glow">
+          Glowing Button
+        </button>
+
+        <p className="font-medium text-[1.2rem] my-[1rem] ">Interactivity</p>
+
+        <input
+          class="border-2 border-gray-300 focus:border-blue-500 rounded py-2 px-3"
+          type="text"
+          placeholder="Focus me"
+        />
+
+        <p className="font-medium text-[1.2rem] my-[1rem] ">Pseudo Elements</p>
+        
+        <button class="relative inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 before:content-['→'] ">
+          Hover Me
+        </button>
+        <button class="relative inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 after:content-['→'] ">
+          Hover Me
+        </button>
+
+        <h1 class="text-2xl font-bold relative after:content-[''] after:block after:w-20 after:h-1 after:bg-blue-500 after:mt-2">
+          Section Title
+        </h1>
       </div>
 
       <div className="h-[6rem] " />
